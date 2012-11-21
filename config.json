@@ -1,0 +1,10 @@
+{
+  "port" : 3000,
+  "prefix" : "",
+  "backend" : {
+    "type" : "redis",
+    "host" : "localhost",
+    "port" : 6379
+  },
+  "debug" : true
+}

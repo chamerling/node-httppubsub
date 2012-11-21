@@ -11,6 +11,8 @@ var express = require('express')
   , path = require('path')
   , app = express();
 
+var port = process.env.PORT || 3003;
+
 app.configure(function() {
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
@@ -31,11 +33,11 @@ app.post('/', function(req, res) {
 });
 server = http.createServer(app);
 
-server.listen(3003, function () {
-  console.log('App is started on 3003');
+server.listen(port, function () {
+  console.log('App is started on ' + port);
   // subscribe to envent producer
   var c = new client.Client(pubsub)
-  c.subscribe(resource, 'http://localhost:3003/', function(err) {
+  c.subscribe(resource, 'http://localhost:' + port + '/', function(err) {
   	console.log('Subscribed to resource ', resource);
   });
 });
