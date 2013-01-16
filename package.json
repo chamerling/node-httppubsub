@@ -1,6 +1,6 @@
 {
   "name": "node-httppubsub",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HTTP PubSub with node.js",
   "author": "Christophe Hamerling <christophe.hamerling@gmail.com>",
   "homepage": "http://github.com/chamerling/node-httppubsub",
